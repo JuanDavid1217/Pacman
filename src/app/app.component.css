@@ -1,0 +1,120 @@
+#data{
+    color: white;
+    width: 100%;
+    height: 10%;
+    font-weight: 600;
+}
+
+#data-up{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#data>#trayins{
+    display: flex;
+}
+
+#up, #score{
+    height: 50%;
+}
+
+#area{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frame{
+    border: 1px solid white;
+    width: 200px;
+    height: 100px;
+    color: white;
+}
+
+#pacman{
+    background: url("../assets/img/pacsprites.png");
+    width: 21px;
+    height: 21px;
+    background-position: -35px -73px;
+}
+
+#pacman-left{
+    background: url("../assets/img/pacsprites.png");
+    width: 21px;
+    height: 21px;
+    background-position: -35px -73px;
+    animation: moveleft 700ms steps(6) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveleft{
+    to{
+        background-position: -35px -217px;
+    }
+}
+
+#pacman-right{
+    background: url("../assets/img/pacsprites.png");
+    width: 21px;
+    height: 21px;
+    background-position: -57px -73px;
+    animation: moveright 700ms steps(6) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveright{
+    to{
+        background-position: -57px -217px;
+    }
+}
+
+#pacman-up{
+    background: url("../assets/img/pacsprites.png");
+    width: 21px;
+    height: 21px;
+    background-position: -79px -73px;
+    animation: moveup 700ms steps(6) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveup{
+    to{
+        background-position: -79px -217px;
+    }
+}
+
+#pacman-down{
+    background: url("../assets/img/pacsprites.png");
+    width: 21px;
+    height: 21px;
+    background-position: -105px -73px;
+    animation: movedown 700ms steps(6) infinite; /*24 px por pixel*/
+}
+
+@keyframes movedown{
+    to{
+        background-position: -105px -217px;
+    }
+}
+
+#activated{
+    background: url("../assets/img/bocina1.png");
+    width: 40px;
+    height: 40px;
+}
+#deactivated{
+    background: url("../assets/img/bocina2.png");
+    width: 40px;
+    height: 40px;
+}
+
+#start{
+    background-color: rgb(0, 12, 255);
+    border: 0px;
+    border-radius: 2px;
+    color: white;
+}
+
+#start:hover{
+    box-shadow: 0 0 10px #03f;
+}
