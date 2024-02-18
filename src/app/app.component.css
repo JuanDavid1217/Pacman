@@ -28,9 +28,11 @@
 }
 
 #frame{
-    border: 1px solid white;
-    width: 200px;
-    height: 100px;
+    border: 1px solid rgb(0, 12, 255);
+    box-shadow: 0 0 10px #03f;
+    border-radius: 5px;
+    width: 420px;
+    height: 210px;
     color: white;
 }
 
@@ -39,6 +41,8 @@
     width: 21px;
     height: 21px;
     background-position: -35px -73px;
+    border-radius: 50%;
+    /*position: absolute;*/
 }
 
 #pacman-left{
@@ -46,7 +50,9 @@
     width: 21px;
     height: 21px;
     background-position: -35px -73px;
-    animation: moveleft 700ms steps(6) infinite; /*24 px por pixel*/
+    border-radius: 50%;
+    position: absolute;
+    animation: moveleft 400ms steps(6) infinite; /*24 px por pixel*/
 }
 
 @keyframes moveleft{
@@ -60,7 +66,9 @@
     width: 21px;
     height: 21px;
     background-position: -57px -73px;
-    animation: moveright 700ms steps(6) infinite; /*24 px por pixel*/
+    border-radius: 50%;
+    position: absolute;
+    animation: moveright 400ms steps(6) infinite; /*24 px por pixel*/
 }
 
 @keyframes moveright{
@@ -74,7 +82,9 @@
     width: 21px;
     height: 21px;
     background-position: -79px -73px;
-    animation: moveup 700ms steps(6) infinite; /*24 px por pixel*/
+    border-radius: 50%;
+    position: absolute;
+    animation: moveup 400ms steps(6) infinite; /*24 px por pixel*/
 }
 
 @keyframes moveup{
@@ -88,7 +98,9 @@
     width: 21px;
     height: 21px;
     background-position: -105px -73px;
-    animation: movedown 700ms steps(6) infinite; /*24 px por pixel*/
+    border-radius: 50%;
+    position: absolute;
+    animation: movedown 400ms steps(6) infinite; /*24 px por pixel*/
 }
 
 @keyframes movedown{

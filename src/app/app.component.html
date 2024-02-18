@@ -6,7 +6,7 @@
   <div id="score">{{score}}</div></div>
 <div id="area">
   <div id="frame"><img id="{{position==0?'pacman':position==1?'pacman-left':position==2?
-    'pacman-up':position==3?'pacman-right':'pacman-down'}}"></div>
+    'pacman-up':position==3?'pacman-right':'pacman-down'}}" name="pacman" [style.left.px]="pacmanPosition.x" [style.top.px]="pacmanPosition.y"></div>
 </div>
 <button id="start" (click)="start()">Start</button>
 <div id="trayins"><img id="pacman" *ngFor="let try of trying"></div>
