@@ -35,28 +35,42 @@ export class AppComponent implements OnInit{
     left:0
   }
 
+  level:any;
+  maxLevel=1;
+
   //map 1,2,3 para paso, 0 para no paso 
-  map=[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-       [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0],
+  levels=[{map:[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+      [0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0],
+      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+      [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+      [0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+      [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+      end:1},
+        {map:[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+       [0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0],
        [0, 2, 2, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 0],
        [0, 2, 2, 0, 1, 1, 0, 2, 2, 2, 2, 2, 0, 1, 1, 0, 2, 2, 2, 0],
        [0, 2, 2, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 0],
        [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
        [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0],
        [0, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0],
-       [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0],
-       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-
-  map2=[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-       [2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 2, 2],
+       [0, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+      end:116},
+        {map:[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+       [2, 1, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 3, 2],
        [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 0],
        [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 0],
        [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 0],
        [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 0],
        [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 0],
        [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 0],
-       [2, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2],
-       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+       [2, 3, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 3, 2],
+       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+       end:85}]
 
   ngOnInit(): void {
     var frameData=document.getElementById('frame')?.getBoundingClientRect()
@@ -66,6 +80,7 @@ export class AppComponent implements OnInit{
     this.frameSize.top=frameData?.top??0
     this.pacmanPosition.x+=frameData?.x??0
     this.pacmanPosition.y+=frameData?.y??0
+    this.level=this.levels[this.maxLevel-1];
   }
 
   key=document.addEventListener('keydown', (e)=>{
@@ -110,7 +125,7 @@ export class AppComponent implements OnInit{
   comprobarMovimiento(x:number, y:number){
     let column=Math.floor((x-this.frameSize.left)/21)
     let row=Math.floor((y-this.frameSize.top)/21)
-    if(this.map[row][column]!=0){
+    if(this.level.map[row][column]!=0){
       return true;
     }else{
       return false;
@@ -120,10 +135,19 @@ export class AppComponent implements OnInit{
   comer(x:number, y:number){
     let column=Math.floor((x-this.frameSize.left)/21)
     let row=Math.floor((y-this.frameSize.top)/21)
-    if(this.map[row][column]==2){
-      this.audio.eating()
-      this.map[row][column]=1
-      this.score+=100
+    if(this.level.map[row][column]==2||this.level.map[row][column]==3){
+      if(this.level.map[row][column]==2){
+        this.audio.eating()
+        this.score+=100
+      }else{
+        this.audio.eatingPlus()
+        this.score+=300
+      }
+      this.level.map[row][column]=1
+      this.level.end-=1;
+      if(this.level.end==0){
+        this.next()
+      }
     }
   }
 
@@ -182,6 +206,23 @@ export class AppComponent implements OnInit{
       }
       this.audio.playing();
     })
+  }
+
+
+  next(){
+    if(this.intervalo){
+      this.intervalo.unsubscribe()
+    }
+    this.position=0;
+    if(this.maxLevel<this.levels.length){
+      this.maxLevel+=1;
+      this.level=this.levels[this.maxLevel-1];
+      this.start();
+    }else{
+      this.audio.winner()
+      window.alert("You are Winner\nScore: "+this.score);
+      window.location.reload()
+    }
   }
 
   mout(){
