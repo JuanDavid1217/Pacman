@@ -28,8 +28,8 @@
 }
 
 #frame{
-    border: 1px solid rgb(0, 12, 255);
-    box-shadow: 0 0 10px #03f;
+    /*border: 1px solid red;
+    /*box-shadow: 0 0 10px #03f;*/
     border-radius: 5px;
     width: 420px;
     height: 210px;
@@ -42,7 +42,15 @@
     height: 21px;
     background-position: -35px -73px;
     border-radius: 50%;
-    /*position: absolute;*/
+    position: absolute;
+}
+
+#pacman-lifes{
+    background: url("../assets/img/pacsprites.png");
+    width: 21px;
+    height: 21px;
+    background-position: -35px -73px;
+    border-radius: 50%;
 }
 
 #pacman-left{
@@ -129,4 +137,30 @@
 
 #start:hover{
     box-shadow: 0 0 10px #03f;
+}
+
+#map{
+    width: 100%;
+    display: flex;
+}
+
+#no-way{
+    width: 19px;
+    height: 19px;
+    border-radius: 2px;
+    border: 1px solid #03f;
+    /*box-shadow: 0 0 5px #03f;*/
+    text-align: center;
+}
+
+#yes-way{
+    width: 21px;
+    height: 21px;
+}
+
+#food{
+    width: 21px;
+    height: 21px;
+    font-weight: 900;
+    text-align: center;
 }

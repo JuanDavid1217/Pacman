@@ -5,8 +5,15 @@
   </div>
   <div id="score">{{score}}</div></div>
 <div id="area">
-  <div id="frame"><img id="{{position==0?'pacman':position==1?'pacman-left':position==2?
-    'pacman-up':position==3?'pacman-right':'pacman-down'}}" name="pacman" [style.left.px]="pacmanPosition.x" [style.top.px]="pacmanPosition.y"></div>
+  <div id="frame">
+    <img id="{{position==0?'pacman':position==1?'pacman-left':position==2?
+    'pacman-up':position==3?'pacman-right':'pacman-down'}}" name="pacman" [style.left.px]="pacmanPosition.x" [style.top.px]="pacmanPosition.y">
+      <div id="map" *ngFor="let cubes of map">
+          <div id="{{cube==0?'no-way':cube==2?'food':'yes-way'}}" *ngFor="let cube of cubes">
+            {{cube==2?'•':''}}
+          </div>
+      </div>
+  </div>
 </div>
 <button id="start" (click)="start()">Start</button>
-<div id="trayins"><img id="pacman" *ngFor="let try of trying"></div>
+<div id="trayins"><img id="pacman-lifes" *ngFor="let try of trying"></div>

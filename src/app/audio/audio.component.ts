@@ -10,13 +10,16 @@ import { Component, Injectable} from '@angular/core';
 
 export class AudioComponent {
   audio=new Audio();
+  eatingSound=new Audio('../assets/audio/pacman-waka-waka2.mp3');
 
   mout(){
     if(this.audio.muted){
       this.audio.muted=false;
+      this.eatingSound.muted=false;
       return true;
     }else{
       this.audio.muted=true;
+      this.eatingSound.muted=true;
       return false;
     }
   }
@@ -31,5 +34,13 @@ export class AudioComponent {
     this.audio.src='../assets/audio/pacman-siren3.mp3';
     this.audio.play();
     this.audio.loop=true;
+  }
+
+  eating(){
+    this.eatingSound.play()
+  }
+
+  eatingPlus(){
+
   }
 }
