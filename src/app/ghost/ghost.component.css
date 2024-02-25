@@ -1,0 +1,257 @@
+#ghost{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -3px -165px;
+    border-radius: 50%;
+    animation: flee 1000ms steps(4) infinite;
+}
+@keyframes flee{
+    to{
+        background-position: -83px -165px;
+    }
+}
+
+/*Ghost 1*/
+#ghost1-left{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -83px -83px;
+    border-radius: 50%;
+    animation: moveleft1 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveleft1{
+    to{
+        background-position: -123px -83px;
+    }
+}
+
+#ghost1-right{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -123px -83px;
+    border-radius: 50%;
+    animation: moveright1 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveright1{
+    to{
+        background-position: -163px -83px;
+    }
+}
+
+#ghost1-up{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -3px -83px;
+    border-radius: 50%;
+    animation: moveup1 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveup1{
+    to{
+        background-position: -43px -83px;
+    }
+}
+
+#ghost1-down{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -43px -83px;
+    border-radius: 50%;
+    animation: movedown1 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes movedown1{
+    to{
+        background-position: -83px -83px;
+    }
+}
+
+/*Ghost 2*/
+#ghost2-left{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -83px -103px;
+    border-radius: 50%;
+    animation: moveleft2 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveleft2{
+    to{
+        background-position: -123px -103px;
+    }
+}
+
+#ghost2-right{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -123px -103px;
+    border-radius: 50%;
+    animation: moveright2 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveright2{
+    to{
+        background-position: -163px -103px;
+    }
+}
+
+#ghost2-up{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -3px -103px;
+    border-radius: 50%;
+    animation: moveup2 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveup2{
+    to{
+        background-position: -43px -103px;
+    }
+}
+
+#ghost2-down{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -43px -103px;
+    border-radius: 50%;
+    animation: movedown2 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes movedown2{
+    to{
+        background-position: -83px -103px;
+    }
+}
+
+/*Ghost 3*/
+#ghost3-left{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -83px -123px;
+    border-radius: 50%;
+    animation: moveleft3 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveleft3{
+    to{
+        background-position: -123px -123px;
+    }
+}
+
+#ghost3-right{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -123px -123px;
+    border-radius: 50%;
+    animation: moveright3 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveright3{
+    to{
+        background-position: -163px -123px;
+    }
+}
+
+#ghost3-up{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -3px -123px;
+    border-radius: 50%;
+    animation: moveup3 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveup3{
+    to{
+        background-position: -43px -123px;
+    }
+}
+
+#ghost3-down{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -43px -123px;
+    border-radius: 50%;
+    animation: movedown3 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes movedown3{
+    to{
+        background-position: -83px -123px;
+    }
+}
+
+/*Ghost 4*/
+#ghost4-left{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -83px -143px;
+    border-radius: 50%;
+    animation: moveleft4 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveleft4{
+    to{
+        background-position: -123px -143px;
+    }
+}
+
+#ghost4-right{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -123px -143px;
+    border-radius: 50%;
+    animation: moveright4 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveright4{
+    to{
+        background-position: -163px -143px;
+    }
+}
+
+#ghost4-up{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -3px -143px;
+    border-radius: 50%;
+    animation: moveup4 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes moveup4{
+    to{
+        background-position: -43px -143px;
+    }
+}
+
+#ghost4-down{
+    background: url("../../assets/img/ghost.png");
+    width: 21px;
+    height: 21px;
+    background-position: -43px -143px;
+    border-radius: 50%;
+    animation: movedown4 400ms steps(2) infinite; /*24 px por pixel*/
+}
+
+@keyframes movedown4{
+    to{
+        background-position: -83px -143px;
+    }
+}

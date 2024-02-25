@@ -45,7 +45,7 @@ export class AudioComponent {
     this.audio.play();
     setTimeout(()=>{
       this.playing()
-    }, 8000)
+    }, 10000)
   }
 
   winner(){

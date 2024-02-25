@@ -1,6 +1,7 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { AudioComponent } from './audio/audio.component';
 import { interval, timer } from 'rxjs';
+import { GhostComponent } from './ghost/ghost.component';
 
 @Component({
   selector: 'app-root',
@@ -38,6 +39,8 @@ export class AppComponent implements OnInit{
   level:any;
   maxLevel=1;
 
+  ghostState:any;
+
   //map 1,2,3 para paso, 0 para no paso 
   levels=[{map:[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
@@ -50,7 +53,7 @@ export class AppComponent implements OnInit{
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
       end:1},
         {map:[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-       [0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0],
+       [0, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0],
        [0, 2, 2, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 0],
        [0, 2, 2, 0, 1, 1, 0, 2, 2, 2, 2, 2, 0, 1, 1, 0, 2, 2, 2, 0],
        [0, 2, 2, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 0],
@@ -61,7 +64,7 @@ export class AppComponent implements OnInit{
        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
       end:116},
         {map:[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-       [2, 1, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 3, 2],
+       [2, 3, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 3, 2],
        [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 0],
        [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 0],
        [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 0],
@@ -141,6 +144,10 @@ export class AppComponent implements OnInit{
         this.score+=100
       }else{
         this.audio.eatingPlus()
+        this.ghostState=false
+        setTimeout(()=>{
+          this.ghostState=true;
+        }, 10000)
         this.score+=300
       }
       this.level.map[row][column]=1
@@ -197,6 +204,7 @@ export class AppComponent implements OnInit{
 
   start(){
     this.playing=false;
+    this.ghostState=2
     this.position=0;
     this.audio.start();
     timer(5000).subscribe(()=>{

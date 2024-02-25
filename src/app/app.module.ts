@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AudioComponent } from './audio/audio.component';
+import { GhostComponent } from './ghost/ghost.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AudioComponent
+    AudioComponent,
+    GhostComponent,
   ],
   imports: [
     BrowserModule
