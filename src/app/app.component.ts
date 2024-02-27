@@ -145,9 +145,13 @@ export class AppComponent implements OnInit{
       }else{
         this.audio.eatingPlus()
         this.ghostState=false
-        setTimeout(()=>{
+        /*setTimeout(()=>{
           this.ghostState=true;
-        }, 10000)
+        }, 10000)*/
+        timer(6000).subscribe(()=>{
+          this.audio.playing()
+          this.ghostState=true;
+        })
         this.score+=300
       }
       this.level.map[row][column]=1
@@ -228,8 +232,10 @@ export class AppComponent implements OnInit{
       this.start();
     }else{
       this.audio.winner()
-      window.alert("You are Winner\nScore: "+this.score);
-      window.location.reload()
+      timer(5000).subscribe(()=>{
+        window.alert("You are Winner\nScore: "+this.score);
+        window.location.reload()
+      })
     }
   }
 

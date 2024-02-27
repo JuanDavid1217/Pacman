@@ -43,9 +43,9 @@ export class AudioComponent {
   eatingPlus(){
     this.audio.src='../assets/audio/pacman-plus.mp3';
     this.audio.play();
-    setTimeout(()=>{
+    /*setTimeout(()=>{
       this.playing()
-    }, 10000)
+    }, 10000)*/
   }
 
   winner(){
